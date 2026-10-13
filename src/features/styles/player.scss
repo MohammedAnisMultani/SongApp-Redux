@@ -1,0 +1,55 @@
+.player-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    .left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-icon{
+        background-color: transparent;
+        border: none;
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .custom-player{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .play-bar{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            border: 1px solid red;
+            min-width: 400px !important;
+            .bar{
+                
+                border-radius: 2px;
+                flex-grow:1;
+                background-color: gray !important;
+                // width: 20px;
+                height: 2px;
+                box-sizing: content-box;
+
+                .seek-bar{
+                    background-color: rgb(3, 169, 3);
+                    height: 100%;
+                    // width: 20%;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+
+    .native-audio{
+        display: none;
+    }
+}

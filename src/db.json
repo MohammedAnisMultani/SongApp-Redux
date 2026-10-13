@@ -1,0 +1,70 @@
+[
+    {
+        "id" : "3903",
+        "name" : "Animal",
+        "releaseDate" : "2023",
+        "displayPicture"  : "/images/Animal.webp",
+        "song" : [
+            {
+                "title" : "Animal HeartBreaking",
+                "id" : "390301",
+                "fileAddress" : "/songs/Animal/animalHeartbreaking.mp3"
+            },
+            {
+                "title" : "Animal Park",
+                "id" : "390302",
+                "fileAddress" : "/songs/Animal/animalPark.mp3"
+            },
+            {
+                "title" : "Jamal Kudu",
+                "id" : "390303",
+                "fileAddress" : "/songs/Animal/jamalKudu.mp3"
+            },
+            {
+                 "title" : "Killing Jija",
+                "id" : "390304",
+                "fileAddress" : "/songs/Animal/killingJeja.mp3"
+            },
+            {
+                 
+                 "title" : "Sari duniya",
+                "id" : "390305",
+                "fileAddress" : "/songs/Animal/sariduniya.mp3"
+            
+            },
+            {
+                "title" : "Satranga",
+                "id" : "390306",
+                "fileAddress" : "/songs/Animal/satranga.mp3"
+            }
+        ]
+    },
+    {
+       "id" : "3904",
+        "name" : "Dhurandar",
+        "releaseDate" : "2025",
+        "displayPicture"  : "/images/Dhurandhar.webp",
+        "song" : [
+            {
+                "title" : "Aakhri Ishq",
+                "id" : "390401",
+                "fileAddress" : "/songs/Dhurandhar/Aakhri Ishq.mp3"
+            },
+            {
+                 "title" : "Aari Aari",
+                "id" : "390402",
+                "fileAddress" : "/songs/Dhurandhar/aariAari.mp3"
+            },
+             {
+                 "title" : "Jaan se Guzarte Hein",
+                "id" : "390403",
+                "fileAddress" : "/songs/Dhurandhar/jaanSeGuzarteHein.mp3"
+            },
+            {
+                "title" : "Mein or Tu",
+                "id" : "390404",
+                "fileAddress" : "/songs/Dhurandhar/meinOrTu.mp3"
+            }
+        ] 
+    }
+]
