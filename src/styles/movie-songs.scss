@@ -1,0 +1,63 @@
+.song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  // each song row (the <div key={item.id}>)
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #fff;              // song title text
+    font-weight: 500;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #282828;
+    }
+  }
+
+  // shared button style
+  button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // first button = play / pause
+  > div > button:first-of-type {
+    margin-left: auto;        // pushes both buttons to the right
+    background: #1db954;
+    color: #000;
+
+    &:hover {
+      background: #1ed760;
+    }
+  }
+
+  // second button = heart
+  > div > button:last-of-type {
+    background: transparent;
+  }
+
+  // Your inline style sets color to 'green' or 'black'.
+  // Inline styles beat normal CSS, so !important is needed to override them.
+  button[style*="black"] {
+    color: #b3b3b3 !important;   // not liked: grey instead of invisible black
+  }
+
+  button[style*="green"] {
+    color: #1db954 !important;   // liked: Spotify green
+  }
+}

@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.app-wrapper {
+  height: 100dvh;                 // full screen height
+  display: grid;
+  grid-template-rows: auto 1fr auto;  // navbar | content | player
+  background: #121212;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 20px;
+  background: #1e1e1e;
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b3b3b3;
+    text-decoration: none;
+
+    &:hover,
+    &.active {              // NavLink adds "active" automatically
+      color: #fff;
+    }
+  }
+}
+
+.outlet-wrapper {
+  overflow-y: auto;         // only this area scrolls
+  padding: 20px;
+}

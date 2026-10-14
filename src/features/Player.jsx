@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './styles/player.scss'
+import '../styles/player.scss'
 import { useDispatch, useSelector } from 'react-redux';
 export default function Player() {
   

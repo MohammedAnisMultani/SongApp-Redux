@@ -1,26 +1,34 @@
-import { Outlet } from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom"
 import Player from "./Player"
-import './styles/music-app.scss'
+import '../styles/music-app.scss'
 import {Badge, Avatar} from 'antd'
 
 const MusicApp = () => {
 return(
-    <>
+    
     <div className="app-wrapper">
         
-        <div className="navbar"> 
+        <nav className="navbar"> 
+        <NavLink to='/' className='nav-link'>
+            <span className="material-icons">home</span>
+            Home
+        </NavLink>
+
+        <NavLink to='/likedsongs' className='nav-link'>
         <Badge count={5}>
             <span className="material-icons">favorite</span>
         </Badge>
-        </div>
+        Liked Songs
+        </NavLink>
+        </nav>
         
-        <div className="outlet-wrapper">
+        <main className="outlet-wrapper">
             <Outlet/>
-        </div>
+        </main>
 
         <Player/>
     </div>
-    </>
+    
 )
 }
 

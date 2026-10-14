@@ -1,0 +1,179 @@
+// .player-container{
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-between;
+//     background-color: black;
+//     color: white;
+//     .left{
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         gap: 1rem;
+//     }
+
+//     .btn-icon{
+//         background-color: transparent;
+//         border: none;
+//         border-radius: 20px;
+//         width: 40px;
+//         height: 40px;
+//     }
+
+//     .custom-player{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         .play-bar{
+//             display: flex;
+//             gap: 10px;
+//             align-items: center;
+//             border: 1px solid red;
+//             min-width: 400px !important;
+//             .bar{
+                
+//                 border-radius: 2px;
+//                 flex-grow:1;
+//                 background-color: gray !important;
+//                 // width: 20px;
+//                 height: 2px;
+//                 box-sizing: content-box;
+
+//                 .seek-bar{
+//                     background-color: rgb(3, 169, 3);
+//                     height: 100%;
+//                     // width: 20%;
+//                     border-radius: 2px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .native-audio{
+//         display: none;
+//     }
+// }
+
+
+// ____________
+
+// ---------- Variables ----------
+$bg-color: #181818;
+$text-color: #ffffff;
+$muted-color: #b3b3b3;
+$bar-bg: #4d4d4d;
+$accent: #1db954;
+
+// ---------- Player bar (fixed at bottom) ----------
+.player-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $bg-color;
+  color: $text-color;
+  border-top: 1px solid #282828;
+  z-index: 100;
+
+  // ---------- Left: image, title, like ----------
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  // Hide the default browser audio controls
+  // (audio still plays, we control it with our custom buttons)
+  .native-audio {
+    display: none;
+  }
+
+  // ---------- Center: buttons + progress bar ----------
+  .custom-player {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    // row of previous / play / next buttons
+    > div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  // ---------- Progress bar ----------
+  .play-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+
+    span {
+      font-size: 12px;
+      color: $muted-color;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .bar {
+      flex: 1;
+      height: 4px;
+      background-color: $bar-bg;
+      border-radius: 2px;
+      overflow: hidden;
+      cursor: pointer;
+
+      .seek-bar {
+        height: 100%;
+        background-color: $text-color;
+        border-radius: 2px;
+        transition: width 0.2s linear;
+      }
+
+      &:hover .seek-bar {
+        background-color: $accent;
+      }
+    }
+  }
+
+  // ---------- Icon buttons (play, next, like...) ----------
+  .btn-icon {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: $text-color;
+    font-size: 28px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+
+    &:hover {
+      transform: scale(1.15);
+      opacity: 0.85;
+    }
+  }
+}
